@@ -11,7 +11,7 @@ BACKUP_EXTENSION="old"
 if [ -z "$FILES" ]; then
     cat <<usage
 Usage: backup [FILE]...
-Copy file(s) with a new extension (.old) to avoid disasters.
+Copy file(s) with a new extension (.$BACKUP_EXTENSION) to avoid disasters.
 usage
 fi
 
