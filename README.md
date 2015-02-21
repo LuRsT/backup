@@ -13,7 +13,6 @@ same directory of the original file.
 
 Examples:
 
-```console
     $ ls
     file.cfg
     $ backup file.cfg
@@ -30,17 +29,14 @@ Examples:
     file3.cfg.old
     file4.cfg.old
     file5.cfg.old
-```
 
 ## Setup
 
 #### Quick install
 
-```console
     $ curl https://raw.githubusercontent.com/LuRsT/backup/master/backup > ~/bin/backup
     (Examine ~/bin/backup)
     $ chmod +x ~/bin/backup
-```
 
 Note: You should have `~/bin` in your `$PATH` for this to work.
 
