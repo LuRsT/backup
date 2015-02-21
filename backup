@@ -1,0 +1,25 @@
+#!/bin/bash
+
+set -o nounset
+set -o errexit
+
+
+FILES=$@
+
+BACKUP_EXTENSION="old"
+
+if [ -z "$FILES" ]; then
+    cat <<usage
+Usage: backup [FILE]...
+Copy file(s) with a new extension (.old) to avoid disasters.
+usage
+fi
+
+for file in $FILES; do
+    has_backup=$(ls -l | awk "/${file}\.${BACKUP_EXTENSION}$/")
+
+    if [[ -z $has_backup ]]; then
+        $(cp $file{,.$BACKUP_EXTENSION})
+        echo ${file}.$BACKUP_EXTENSION
+    fi
+done
