@@ -46,6 +46,6 @@ Note: You should have `~/bin` in your `$PATH` for this to work.
 You might say that this is an over complication of `cp file{,.old}` and you
 are correct, this is an overcomplication of cp + expansions, I created this
 for two reasons, to avoid mistakes like `cp file{,old}` that are easy to
-overlook, and for people who don't know and don't want to know about bash
-expansions.
+overlook (which may cause you to override or misplace the copy), and for people
+who don't know and don't want to know about bash expansions.
 
